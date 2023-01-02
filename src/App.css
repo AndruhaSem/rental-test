@@ -1,0 +1,177 @@
+.nav {
+  display: flex;
+  padding-left: 0;
+}
+.nav-item {
+  list-style-type: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.nav-item.user {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+.user-icons {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid black;
+  margin-left: 10px;
+  float: right;
+  margin-bottom: 0px;
+  margin-top: -4px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: blueviolet;
+}
+.it {
+  margin-left: 65px;
+  margin-right: 135px;
+}
+.register {
+  padding-left: 0;
+  margin-right: 65px;
+}
+.loging {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+  color: cadetblue;
+}
+
+.test {
+  display: none;
+  float: right;
+  margin-right: 10px;
+  background: yellowgreen;
+}
+.test3 {
+  list-style-type: none;
+  width: 170px;
+  padding-left: 0px;
+  margin: 0;
+  text-align: center;
+}
+.test2 {
+  border: 1px solid black;
+  padding: 2px 0 2px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.active {
+  display: flex;
+}
+
+/* .test6 {
+  margin-bottom: 2px;
+}*/
+.test5 {
+  padding-right: 10px;
+  width: 270px;
+  padding-left: 15px;
+}
+.float-l {
+  float: left;
+  margin-bottom: 2px;
+}
+.float-r {
+  margin-left: 15px;
+  float: right;
+}
+
+.img {
+  width: 500px;
+  height: 300px;
+  margin-right: 70px;
+}
+.w1 {
+  margin-top: 58px;
+  margin-bottom: 58px;
+}
+.w2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.w3 {
+  display: flex;
+  justify-content: space-between;
+  background: bisque;
+}
+.w4 {
+  margin-left: 250px;
+  margin-left: 250px;
+  font-size: 30px;
+  width: 200px;
+  text-align: center;
+  margin-top: 20px;
+}
+.w5 {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid #dedede;
+  width: 100%;
+  padding: 2px 0 2px 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.delete-modal {
+  background: #dedede;
+  padding: 20px;
+}
+
+.delete-modal__question {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.delete-modal__button {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 14px;
+  transition: 0.3s ease;
+  background-color: #ed6755;
+  width: 200px;
+  box-shadow: 0px 6px 18px -5px rgb(237 103 85);
+}
+
+.delete-modal {
+  z-index: 9999;
+  pointer-events: auto;
+  border-radius: 20px;
+  width: 27%;
+  padding: 20px;
+}
