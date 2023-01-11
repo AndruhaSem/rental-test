@@ -1,0 +1,175 @@
+:root {
+    --text-color: #fff;
+    --hover-text: #eb5a1e;
+    --button-color: #03e9f4;
+}
+
+.containerr {
+    background: linear-gradient(#141e30, #243b55);
+}
+.containerr_rental h2 {
+    padding: 40px 0 0 0;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 0;
+}
+.form-check-input-rental {
+    appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.form-check-rental {
+    margin-right: 15px;
+}
+.form-container-rental {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+.form-check-input-rental:checked {
+    background-color: #eb5a1e;
+    border-color: #eb5a1e;
+}
+.label {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.rental-choice {
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+.items,
+.counter-wrapper {
+    font-family: "Merriweather", serif;
+    background: #f2ede7;
+    border-radius: 8px;
+    width: 120px;
+    display: flex;
+    font-size: 18px;
+    overflow: hidden;
+    text-align: center;
+}
+.info-position__street.active .icons {
+    background: var(--text-color);
+}
+.container-info__client.active {
+    display: block;
+}
+.info-position__room.active .icons {
+    background: var(--text-color);
+}
+.cash-payments.active .icons {
+    background: var(--text-color);
+}
+.no-cash_payments.active .icons {
+    background: var(--text-color);
+}
+.client-deposit.active .icons {
+    background: var(--text-color);
+}
+.client-deposit_cash.active .icons {
+    background: var(--text-color);
+}
+.rental-label {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.rental-lable-form {
+    color: #fff;
+}
+.items__control,
+.items__controll {
+    width: 40px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    line-height: 1.5;
+    height: 30px;
+}
+
+.items__current {
+    width: 40px;
+    line-height: 1.5;
+    height: 30px;
+}
+.items__control:hover,
+.items__controll:hover {
+    background: var(--hover-text);
+    color: var(--text-color);
+}
+.details-wrapper_quantity,
+.details-wrapper_time {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container-info__client {
+    display: none;
+    margin-top: 50px;
+}
+
+.form-control-rental {
+    position: relative;
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    width: 40%;
+    border-radius: 0.375rem;
+    margin-top: 4px;
+}
+
+.width {
+    margin-left: 37%;
+}
+
+.invalid-feedback {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+.user-box {
+    width: 100%;
+}
+
+.create-button__arrange {
+    margin-bottom: 109px;
+    width: 14%;
+    background: #eb5a1e;
+    border: 1px solid #eb5a1e;
+    border-radius: 5px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.create-button__arrange:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+.create_button {
+    display: flex;
+    justify-content: center;
+}
+
+.user-box input::-webkit-outer-spin-button,
+.user-box input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
