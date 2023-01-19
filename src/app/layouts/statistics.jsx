@@ -4,25 +4,34 @@ import Pagination from "../components/common/pagination";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
 import PropTypes from "prop-types";
-import { useStatistics } from "../hooks/useStatistics";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    deleteStatistics,
+    getStatistics,
+    getStatisticsLoadingStatus
+} from "../store/statistics";
 
 function Statistics() {
     const [currentPage, setCurrenPage] = useState(1);
     const pageSize = 10;
-    const [sortBy, setSortBy] = useState({ path: "id", order: "asc" });
-    const { statistic, isLoading, removeStatistic } = useStatistics();
+    const dispatch = useDispatch();
+    const statistic = useSelector(getStatistics());
+    const isLoading = useSelector(getStatisticsLoadingStatus());
+    const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
     function handleSort(item) {
         setSortBy(item);
     }
+
     const handlePageChange = (pageIndex) => {
         setCurrenPage(pageIndex);
     };
 
     function handleDelete(userId) {
-        removeStatistic(userId);
+        dispatch(deleteStatistics(userId));
     }
     if (!isLoading && statistic) {
         const count = statistic.length;
+
         const sortedUsers = _.orderBy(statistic, [sortBy.path], [sortBy.order]);
         const userCrop = paginate(sortedUsers, currentPage, pageSize);
 

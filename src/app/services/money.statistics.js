@@ -7,7 +7,7 @@ const moneyService = {
         const { data } = await httpService.get(statisticEndpoint);
         return data;
     },
-    create: async (payload) => {
+    createMoney: async (payload) => {
         const { data } = await httpService.put(
             statisticEndpoint + payload.id,
             payload

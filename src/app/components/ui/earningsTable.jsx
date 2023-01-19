@@ -1,12 +1,13 @@
 import React from "react";
-import { useMoney } from "../../hooks/useMoney";
-import { useAuth } from "../../hooks/useAuth";
-import { useUser } from "../../hooks/useUsers";
+import { useSelector } from "react-redux";
+import { getMoney, getMoneyLoadingStatus } from "../../store/money";
+import { getCurrentUserData, getUsersList } from "../../store/users";
 
 const EarningsTable = () => {
-    const { money } = useMoney();
-    const { currentUser } = useAuth();
-    const { users } = useUser();
+    const money = useSelector(getMoney());
+    const isLoggedIn = useSelector(getMoneyLoadingStatus());
+    const currentUser = useSelector(getCurrentUserData());
+    const users = useSelector(getUsersList());
     const priceDay = 1000;
     const priceHourr = 500;
     const priceHalfDay = 1500;
@@ -93,7 +94,7 @@ const EarningsTable = () => {
             ((currentUser.fraction * 100) / fraction).toFixed(0)
         );
     }
-    if (money) {
+    if (!isLoggedIn) {
         return (
             <table>
                 <tbody>

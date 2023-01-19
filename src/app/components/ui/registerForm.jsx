@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import TextField from "../common/form/textField";
 import { validator } from "../../utils/validator";
 import CheckBoxField from "../common/form/checkBoxField";
-import { useAuth } from "../../hooks/useAuth";
-import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { signUp } from "../../store/users";
 
 const RegisterForm = () => {
-    const { signUp } = useAuth();
-    const history = useHistory();
+    const dispatch = useDispatch();
     const [data, setData] = useState({
         name: "",
         email: "",
@@ -66,16 +65,11 @@ const RegisterForm = () => {
         return Object.keys(errors).length === 0;
     }
     const isValid = Object.keys(errors).length === 0;
-    async function handleSubmit(e) {
+    function handleSubmit(e) {
         e.preventDefault();
         const isValid = validate();
         if (!isValid) return;
-        try {
-            await signUp(data);
-            history.push("/");
-        } catch (error) {
-            setErrors(error);
-        }
+        dispatch(signUp(data));
     }
     return (
         <form onSubmit={handleSubmit}>

@@ -6,12 +6,12 @@ import PaymentMethod from "../components/common/form/paymentMethod";
 import RadioFildDeposit from "../components/common/form/RadioFilddeposit";
 import TextFieldRental from "../components/common/form/textFieldRental";
 import { validator } from "../utils/validatorRental";
-import { useStatistics } from "../hooks/useStatistics";
-import { useMoney } from "../hooks/useMoney";
+import { useDispatch } from "react-redux";
+import { createMoney } from "../store/money";
+import { createStatistics } from "../store/statistics";
 
 function Rental() {
-    const { createStatustic } = useStatistics();
-    const { createMoney } = useMoney();
+    const dispatch = useDispatch();
     const [data, setData] = useState({
         кentalСhoice: "Пляж",
         quantity: 1,
@@ -140,8 +140,8 @@ function Rental() {
 
         console.log(data);
         apdateData();
-        createStatustic(data);
-        createMoney(data);
+        dispatch(createMoney(data));
+        dispatch(createStatistics(data));
     };
 
     return (

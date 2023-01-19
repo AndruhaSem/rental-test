@@ -19,7 +19,7 @@ export const StatisticsProvider = ({ children }) => {
 
     async function getStatistics() {
         try {
-            const { content } = await statisticService.get();
+            const { content } = await statisticService.getStatistics();
             setStatistics(content);
         } catch (error) {
             errorCatcher(error);
@@ -35,7 +35,7 @@ export const StatisticsProvider = ({ children }) => {
             ...data
         };
         try {
-            const { content } = await statisticService.create(stat);
+            const { content } = await statisticService.createStatistics(stat);
             setStatistics((prevState) => [...prevState, content]);
         } catch (error) {
             errorCatcher(error);
@@ -43,7 +43,7 @@ export const StatisticsProvider = ({ children }) => {
     }
     async function removeStatistic(id) {
         try {
-            const { content } = await statisticService.remove(id);
+            const { content } = await statisticService.removeStatistics(id);
             if (content === null) {
                 setStatistics((prevState) =>
                     prevState.filter((c) => c.id !== id)

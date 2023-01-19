@@ -1,16 +1,24 @@
 import React, { useState } from "react";
-import { useAuth } from "../../hooks/useAuth";
-import navAuth from "./navAuth";
-import NavBarIsUsers from "./NavBarIsUsers";
+import navAuthAdmin from "./hoc/navAuthAdmin";
+import navAuthJobs from "./hoc/navAuthJobs";
+import navAuth from "./hoc/navAuth";
+import NavBarIsUsersAdmin from "./hocNavBar/NavBarIsUsersAdmin";
+import NavBarIsUsersJobs from "./hocNavBar/NavBarIsUsersJobs";
+import NavBarIsUsers from "./hocNavBar/NavBarIsUsers";
+import { useSelector } from "react-redux";
+import { getCurrentUserData } from "../../store/users";
 
 const NavProfile = () => {
-    const { currentUser } = useAuth();
+    const currentUser = useSelector(getCurrentUserData());
+    console.log();
     const [isOpen, setOpen] = useState(false);
     function toggleMenu() {
         setOpen((prevState) => !prevState);
     }
-    const ComponentNavHoc = navAuth(NavBarIsUsers);
-
+    const ComponentNavHocAdmin = navAuthAdmin(NavBarIsUsersAdmin);
+    const ComponentNavHocJobs = navAuthJobs(NavBarIsUsersJobs);
+    const ComponentNavHocUser = navAuth(NavBarIsUsers);
+    if (!currentUser) return "loading@";
     return (
         <>
             <div className="dropdown" onClick={toggleMenu}>
@@ -24,7 +32,9 @@ const NavProfile = () => {
                     />
                 </div>
 
-                <ComponentNavHoc isOpen={isOpen} />
+                <ComponentNavHocAdmin isOpen={isOpen} />
+                <ComponentNavHocJobs isOpen={isOpen} />
+                <ComponentNavHocUser isOpen={isOpen} />
             </div>
         </>
     );
