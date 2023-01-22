@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ThemeContext = React.createContext();
 
-export const useTheme = () => {
+export const useDarkMode = () => {
     return useContext(ThemeContext);
 };
 export const ThemeProvider = ({ children }) => {

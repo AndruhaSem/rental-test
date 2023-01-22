@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import NavProfile from "./navProfile";
 import { useSelector } from "react-redux";
 import { getIsLoggedIn } from "../../store/users";
-import { useTheme } from "../../hooks/useTheme";
+import { useDarkMode } from "../../hooks/useTheme";
 
 const NavBar = () => {
-    const { handleClickTheme } = useTheme();
+    const { handleClickTheme } = useDarkMode();
     const isLoggedIn = useSelector(getIsLoggedIn());
 
     return (

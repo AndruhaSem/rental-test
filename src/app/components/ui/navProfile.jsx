@@ -27,7 +27,7 @@ const NavProfile = () => {
                     <img
                         src={currentUser.image}
                         alt=""
-                        height="40"
+                        height="35"
                         className="img-responsive rounded-circle"
                     />
                 </div>
