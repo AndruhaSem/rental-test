@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "../common/table/table";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function UserTable({ statistic, onSort, selectedSort, onDelete }) {
     function addStartRental(time) {
@@ -16,7 +17,10 @@ function UserTable({ statistic, onSort, selectedSort, onDelete }) {
     const columns = {
         id: {
             path: "id",
-            name: "Номер заказа"
+            name: "Номер заказа",
+            component: (user) => (
+                <Link to={`/statistic/${user.id}`}>{user.id}</Link>
+            )
         },
         telephone: {
             name: "Телефон",

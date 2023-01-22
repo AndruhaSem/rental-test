@@ -42,7 +42,6 @@ export const loadBookingList = () => async (dispatch, getState) => {
         try {
             const { content } = await bookingService.get();
             dispatch(bookingReceived(content));
-            console.log(content);
         } catch (error) {
             dispatch(bookingRequestFailed(error.message));
         }

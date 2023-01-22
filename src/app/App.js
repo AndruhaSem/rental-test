@@ -1,4 +1,3 @@
-import "../App.css";
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import NavBar from "./components/ui/navBar";
@@ -11,26 +10,29 @@ import Statistics from "./layouts/statistics";
 import ProtectedRouteAdmin from "./components/common/protectedRoute/protectedRouteAdmin";
 import ProtectedRouteJobs from "./components/common/protectedRoute/protectedRouteJobs";
 import AppLoader from "./components/ui/hoc/appLoader";
+import { ThemeProvider } from "./hooks/useTheme";
 
 function App() {
     return (
-        <div>
+        <div className="containers">
             <AppLoader>
-                <NavBar />
+                <ThemeProvider>
+                    <NavBar />
 
-                <Switch>
-                    <Route path="/reservations" component={Reservations} />
-                    <Route path="/login/:type?" component={Login} />
-                    <Route path="/logout" component={LogOut} />
-                    <ProtectedRouteJobs path="/rental" component={Rental} />
-                    <ProtectedRouteAdmin
-                        path="/statistic"
-                        component={Statistics}
-                    />
-                    <Route path="/" exact component={Home} />
+                    <Switch>
+                        <Route path="/reservations" component={Reservations} />
+                        <Route path="/login/:type?" component={Login} />
+                        <Route path="/logout" component={LogOut} />
+                        <ProtectedRouteJobs path="/rental" component={Rental} />
+                        <ProtectedRouteAdmin
+                            path="/statistic/:statisticId?"
+                            component={Statistics}
+                        />
+                        <Route path="/" exact component={Home} />
 
-                    <Redirect to="/" />
-                </Switch>
+                        <Redirect to="/" />
+                    </Switch>
+                </ThemeProvider>
             </AppLoader>
         </div>
     );

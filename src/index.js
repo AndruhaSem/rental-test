@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./bootstrapStyles.css";
 import "./stylesTeble.css";
+import "./App.css";
+import "./index.css";
 import "./rental.css";
 import App from "./app/App";
 import { Router } from "react-router-dom";

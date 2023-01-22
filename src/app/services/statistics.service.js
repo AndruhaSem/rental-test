@@ -19,6 +19,13 @@ const statisticService = {
             statisticEndpoint + commentId
         );
         return data;
+    },
+    update: async (payload) => {
+        const { data } = await httpService.patch(
+            statisticEndpoint + payload.id,
+            payload
+        );
+        return data;
     }
 };
 export default statisticService;

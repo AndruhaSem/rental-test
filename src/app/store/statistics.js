@@ -1,6 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAction } from "@reduxjs/toolkit";
 import statisticService from "../services/statistics.service";
 import { nanoid } from "nanoid";
+import history from "../utils/history";
 
 const statisticsSlice = createSlice({
     name: "statistics",
@@ -28,6 +29,11 @@ const statisticsSlice = createSlice({
             state.entities = state.entities.filter(
                 (el) => el.id !== action.payload
             );
+        },
+        statisticUpdateSuccessed: (state, action) => {
+            state.entities[
+                state.entities.findIndex((u) => u.id === action.payload.id)
+            ] = action.payload;
         }
     }
 });
@@ -38,8 +44,13 @@ const {
     statisticsReceived,
     statisticsRequestFailed,
     statisticsCreated,
-    statisticsRemove
+    statisticsRemove,
+    statisticUpdateSuccessed
 } = actions;
+
+const statisticUpdateRequested = createAction(
+    "statistic/statisticUpdateRequested"
+);
 
 export const loadStatisticsList = () => async (dispatch) => {
     dispatch(statisticsRequested());
@@ -71,6 +82,22 @@ export const createStatistics = (data) => async (dispatch) => {
         dispatch(statisticsCreated(content));
     } catch (error) {
         dispatch(statisticsRequestFailed(error.message));
+    }
+};
+export const updateStatistic = (payload) => async (dispatch) => {
+    dispatch(statisticUpdateRequested());
+    try {
+        const { content } = await statisticService.update(payload);
+        dispatch(statisticUpdateSuccessed(content));
+        history.push("/statistic");
+    } catch (error) {
+        dispatch(statisticsRequestFailed(error.message));
+    }
+};
+
+export const getStatisticsById = (id) => (state) => {
+    if (state.statistics.entities) {
+        return state.statistics.entities.find((p) => p.id === id);
     }
 };
 

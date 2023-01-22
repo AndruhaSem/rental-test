@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const RadioFild = ({ options, name, value, onChange, label }) => {
+const RadioFildPage = ({ options, name, value, onChange, label }) => {
     function handleChange({ target }) {
         onChange({ name: target.name, value: target.value });
     }
     return (
         <>
-            <div className="rental-choice">
+            <div className="rental-choice-page">
                 {label ? <label className="label">{label}</label> : null}
                 <div className="form-container-rental">
                     {options.map((option) => (
@@ -38,11 +38,11 @@ const RadioFild = ({ options, name, value, onChange, label }) => {
         </>
     );
 };
-RadioFild.propTypes = {
+RadioFildPage.propTypes = {
     value: PropTypes.string,
     onChange: PropTypes.func,
     options: PropTypes.array,
     name: PropTypes.string,
     label: PropTypes.string
 };
-export default RadioFild;
+export default RadioFildPage;

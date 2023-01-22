@@ -51,111 +51,18 @@
         max-width: 540px;
     }
 }
-:root {
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-black: #000;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-gray-100: #f8f9fa;
-    --bs-gray-200: #e9ecef;
-    --bs-gray-300: #dee2e6;
-    --bs-gray-400: #ced4da;
-    --bs-gray-500: #adb5bd;
-    --bs-gray-600: #6c757d;
-    --bs-gray-700: #495057;
-    --bs-gray-800: #343a40;
-    --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-primary-rgb: 13, 110, 253;
-    --bs-secondary-rgb: 108, 117, 125;
-    --bs-success-rgb: 25, 135, 84;
-    --bs-info-rgb: 13, 202, 240;
-    --bs-warning-rgb: 255, 193, 7;
-    --bs-danger-rgb: 220, 53, 69;
-    --bs-light-rgb: 248, 249, 250;
-    --bs-dark-rgb: 33, 37, 41;
-    --bs-white-rgb: 255, 255, 255;
-    --bs-black-rgb: 0, 0, 0;
-    --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg-rgb: 255, 255, 255;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-        "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-    --bs-gradient: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0)
-    );
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-    --bs-body-color: #212529;
-    --bs-body-bg: #fff;
-    --bs-border-width: 1px;
-    --bs-border-style: solid;
-    --bs-border-color: #dee2e6;
-    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-    --bs-border-radius: 0.375rem;
-    --bs-border-radius-sm: 0.25rem;
-    --bs-border-radius-lg: 0.5rem;
-    --bs-border-radius-xl: 1rem;
-    --bs-border-radius-2xl: 2rem;
-    --bs-border-radius-pill: 50rem;
-    --bs-link-color: #0d6efd;
-}
 
 .btn {
     --bs-btn-padding-x: 0.75rem;
     --bs-btn-padding-y: 0.375rem;
-    --bs-btn-font-family: ;
-    --bs-btn-font-size: 1rem;
-    --bs-btn-font-weight: 400;
     --bs-btn-line-height: 1.5;
-    --bs-btn-color: #212529;
-    --bs-btn-bg: transparent;
     --bs-btn-border-width: 1px;
-    --bs-btn-border-color: transparent;
     --bs-btn-border-radius: 0.375rem;
     --bs-btn-hover-border-color: transparent;
-    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
-        0 1px 1px rgba(0, 0, 0, 0.075);
-    --bs-btn-disabled-opacity: 0.65;
-    --bs-btn-focus-box-shadow: 0 0 0 0.25rem
-        rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
-    display: inline-block;
     padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-    font-family: var(--bs-btn-font-family);
-    font-size: var(--bs-btn-font-size);
-    font-weight: var(--bs-btn-font-weight);
     line-height: var(--bs-btn-line-height);
     color: var(--bs-btn-color);
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
     border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
     border-radius: var(--bs-btn-border-radius);
     background-color: var(--bs-btn-bg);
@@ -163,20 +70,11 @@
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #0d6efd;
-    --bs-btn-border-color: #0d6efd;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
+    --bs-btn-color: var(--button-row-text-form-color);
+    --bs-btn-bg: var(--button-row--background-color);
+    --bs-btn-border-color: var(--button-row-border-form-color);
+    transition: --bs-btn-color 400ms linear, --bs-btn-bg 400ms linear,
+        --bs-btn-border-color 400ms linear;
 }
 .btn-outline-secondary {
     --bs-btn-color: #6c757d;
@@ -240,9 +138,17 @@
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
+    background-color: var(--row-background-form-color);
+    transition: background-color 400ms linear;
+}
+.col-md-6 p {
+    color: var(--row-text-form-color);
+    transition: color 400ms linear;
 }
 .mb-4 {
     margin-bottom: 1.5rem;
+    color: var(--row-text-form-color);
+    transition: color 400ms linear;
 }
 h3,
 .h3 {
@@ -282,7 +188,11 @@ label {
     background-position: right calc(0.375em + 0.1875rem) center;
     background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-
+.input-group > .form-control:focus,
+.input-group > .form-select:focus,
+.input-group > .form-floating:focus-within {
+    z-index: 5;
+}
 .input-group > .form-control,
 .input-group > .form-select,
 .input-group > .form-floating {
@@ -316,6 +226,10 @@ label {
     width: 1%;
     min-width: 0;
 }
+.lb-text-fild {
+    color: var(--row-text-form-color);
+    transition: border-color 400ms linear;
+}
 .form-control {
     display: block;
     width: 100%;
@@ -323,10 +237,9 @@ label {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    /* background-clip: padding-box; */
-    border: 1px solid #ced4da;
+    color: var(--input-text-rental-color);
+    background-color: var(--input-background-rental-color);
+    border: 1px solid var(--input-border-rental-color);
     appearance: none;
     border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -369,11 +282,8 @@ label {
 .btn:disabled,
 .btn.disabled,
 fieldset:disabled .btn {
-    color: var(--bs-btn-disabled-color);
+    opacity: 0.6;
     pointer-events: none;
-    background-color: var(--bs-btn-disabled-bg);
-    border-color: var(--bs-btn-disabled-border-color);
-    opacity: var(--bs-btn-disabled-opacity);
 }
 .mx-auto {
     margin-right: auto !important;
@@ -382,7 +292,6 @@ fieldset:disabled .btn {
 .w-100 {
     width: 100% !important;
 }
-
 button,
 select {
     text-transform: none;

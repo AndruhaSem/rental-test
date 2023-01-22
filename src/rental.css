@@ -5,18 +5,22 @@
 }
 
 .containerr {
-    background: linear-gradient(#141e30, #243b55);
+    /* background: linear-gradient(#141e30, #243b55); */
+    background: var(--background-rental-color);
 }
 .containerr_rental h2 {
     padding: 40px 0 0 0;
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: var(--label-text-rental-color);
     text-align: center;
     margin-top: 0;
 }
 .form-check-input-rental {
     appearance: none;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    background: #fff;
+    /* border: 1px solid rgba(0, 0, 0, 0.25); */
+    border: 1px solid var(--label-border-rental-color);
+    /* background: #fff; */
+    background: var(--label-background-rental-color);
     width: 1em;
     height: 1em;
     border-radius: 50%;
@@ -31,8 +35,10 @@
     margin-left: 30px;
 }
 .form-check-input-rental:checked {
-    background-color: #eb5a1e;
-    border-color: #eb5a1e;
+    /* background-color: #eb5a1e;
+    border-color: #eb5a1e; */
+    background: var(--label-background-rental-click-color);
+    border-color: var(--label-background-rental-click-color);
 }
 .label {
     display: flex;
@@ -41,14 +47,35 @@
     margin-bottom: 25px;
 }
 .rental-choice {
-    color: #fff;
+    /* color: #fff; */
+    color: var(--label-text-rental-color);
     margin-top: 40px;
     margin-bottom: 35px;
 }
+/*--------------*/
+
+.rental-choice-page {
+    /* color: #111; */
+    color: var(--row-text-form-color);
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+.rental-label_black {
+    /* color: #111; */
+    color: var(--row-text-form-color);
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+/*-------------*/
+
 .items,
 .counter-wrapper {
     font-family: "Merriweather", serif;
-    background: #f2ede7;
+    /* background: #f2ede7; */
+    background: var(--counter-background-rental-color);
+    color: var(--counter-text-rental-hover-color);
     border-radius: 8px;
     width: 120px;
     display: flex;
@@ -56,12 +83,13 @@
     overflow: hidden;
     text-align: center;
 }
+.container-info__client.active {
+    display: block;
+} /*
 .info-position__street.active .icons {
     background: var(--text-color);
 }
-.container-info__client.active {
-    display: block;
-}
+
 .info-position__room.active .icons {
     background: var(--text-color);
 }
@@ -76,16 +104,24 @@
 }
 .client-deposit_cash.active .icons {
     background: var(--text-color);
+} */
+.back {
+    margin-left: 80px;
+    margin-top: 60px;
+    position: absolute;
 }
 .rental-label {
-    color: #fff;
+    /* color: #fff; */
+    color: var(--label-text-rental-color);
     display: flex;
     justify-content: center;
     font-size: 20px;
     margin-bottom: 25px;
 }
+
 .rental-lable-form {
-    color: #fff;
+    /* color: #fff; */
+    color: var(--label-text-rental-color);
 }
 .items__control,
 .items__controll {
@@ -103,8 +139,10 @@
 }
 .items__control:hover,
 .items__controll:hover {
-    background: var(--hover-text);
-    color: var(--text-color);
+    /* background: var(--hover-text);
+    color: var(--text-color); */
+    background: var(--counter-background-rental-hover-color);
+    color: var(--counter-text-rental-hover-colo);
 }
 .details-wrapper_quantity,
 .details-wrapper_time {
@@ -125,9 +163,12 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    /* color: #212529;
     background-color: #fff;
-    border: 1px solid #ced4da;
+    border: 1px solid #ced4da; */
+    color: var(--input-text-rental-color);
+    background-color: var(--input-background-rental-color);
+    border: 1px solid var(--input-border-rental-color);
     width: 40%;
     border-radius: 0.375rem;
     margin-top: 4px;
@@ -151,8 +192,11 @@
 .create-button__arrange {
     margin-bottom: 109px;
     width: 14%;
-    background: #eb5a1e;
-    border: 1px solid #eb5a1e;
+    /* background: #eb5a1e;
+    border: 1px solid #eb5a1e; */
+    background: var(--button-background-rental-color);
+    border: 1px solid var(--button-border-rental-color);
+    color: var(--button-text-rental-color);
     border-radius: 5px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;

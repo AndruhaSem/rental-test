@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import ChoosingRental from "../components/common/form/choosingRental";
 import NumberProduct from "../components/common/form/numberProduct";
 import TimeRental from "../components/common/form/timeRental";
-import PaymentMethod from "../components/common/form/paymentMethod";
-import RadioFildDeposit from "../components/common/form/RadioFilddeposit";
+import RadioFild from "../components/common/form/radioFild";
 import TextFieldRental from "../components/common/form/textFieldRental";
 import { validator } from "../utils/validatorRental";
 import { useDispatch } from "react-redux";
@@ -175,7 +174,7 @@ function Rental() {
                         handleDecrement={handleDecrement}
                         label="Время"
                     />
-                    <PaymentMethod
+                    <RadioFild
                         options={[
                             { name: "Наличные", value: "Наличные" },
                             { name: "Перевод", value: "Перевод" }
@@ -191,7 +190,7 @@ function Rental() {
                         (data.кentalСhoice === "Помещение" ? "active" : "")
                     }
                 >
-                    <RadioFildDeposit
+                    <RadioFild
                         options={[
                             { name: "Документы", value: "Документы" },
                             { name: "Наличка", value: "Наличка" }
