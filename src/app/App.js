@@ -1,7 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import NavBar from "./components/ui/navBar";
-import Home from "./layouts/home";
 import Reservations from "./layouts/reservations";
 import Login from "./layouts/login";
 import LogOut from "./layouts/logOut";
@@ -11,6 +10,7 @@ import ProtectedRouteAdmin from "./components/common/protectedRoute/protectedRou
 import ProtectedRouteJobs from "./components/common/protectedRoute/protectedRouteJobs";
 import AppLoader from "./components/ui/hoc/appLoader";
 import { ThemeProvider } from "./hooks/useTheme";
+import User from "./layouts/user";
 
 function App() {
     return (
@@ -28,7 +28,7 @@ function App() {
                             path="/statistic/:statisticId?"
                             component={Statistics}
                         />
-                        <Route path="/" exact component={Home} />
+                        <Route path="/:userId?" component={User} />
 
                         <Redirect to="/" />
                     </Switch>

@@ -200,7 +200,7 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    margin-left: -232px;
+    margin-left: -250px;
     background: var(--nav-background-color);
     border: 1px solid rgba(0, 0, 0, 0.175);
     border-radius: 0.375rem;
@@ -212,7 +212,7 @@ body {
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.175);
     border-radius: 0.375rem;
-    margin-left: 55px;
+    margin-left: 30px;
 }
 .dropdown-menu-jobs {
     display: none;
@@ -220,7 +220,7 @@ body {
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.175);
     border-radius: 0.375rem;
-    margin-left: 105px;
+    margin-left: 85px;
 }
 .dropdown-menu-user.show,
 .dropdown-menu-jobs.show,
